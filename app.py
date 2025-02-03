@@ -8,7 +8,7 @@ import os
 image = Image.open('./image.jpg')  # Replace with your image path
 
 # Display the image
-st.image(image, use_column_width=True)
+st.image(image)
 
 # Load the saved model with error handling
 model_path = os.path.join(os.path.dirname(__file__), 'random_forest_model_1.pkl')
@@ -34,7 +34,7 @@ def predict_outcome(age, fever, chills, fatigue, travel_history, mosquito_presen
 
 # Create the Streamlit app
 def main():
-    st.title("Disease Outcome Prediction")
+    st.title("Malaria Disease Outcome Prediction")
     st.write("""
     This app predicts the likelihood of a disease outcome based on patient data.
     Please fill in the details below and click 'Predict' to see the result.
