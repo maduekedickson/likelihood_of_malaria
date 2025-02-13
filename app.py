@@ -35,9 +35,22 @@ def predict_outcome(age, fever, chills, fatigue, travel_history, mosquito_presen
 # Create the Streamlit app
 def main():
     st.title("Malaria Disease Outcome Prediction")
-    st.write("""
-    This app predicts the likelihood of a disease outcome based on patient data.
-    Please fill in the details below and click 'Predict' to see the result.
+    
+    # Add Description Section
+    st.markdown("""
+    ### **Description**
+    This AI-powered tool predicts whether a patient has **malaria** based on their symptoms, travel history, and environmental factors.  
+    Early diagnosis can help in **timely treatment** and **reducing transmission rates**.  
+
+    ### **How It Works**
+    - Input the patient's **age, symptoms (fever, chills, fatigue)**, and other relevant details.  
+    - Click **'Predict'** to analyze the likelihood of malaria.  
+    - The model outputs a **red alert** if malaria is likely, or a **blue notification** if the patient is not at risk.  
+
+    ### **Use Case**
+    - Assists **health professionals** in preliminary malaria screening.  
+    - Can be used in **remote areas** where access to healthcare is limited.  
+    - Helps researchers track **malaria prevalence** using patient data.  
     """)
     
     # Add input fields for various features
